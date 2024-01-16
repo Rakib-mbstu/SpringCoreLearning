@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--    bean is the way to set values using getter setter method....-->
+    <bean id="animals" class="com.springcore.Lion">
+<!--        <property.properties name="Name_to_be_called" value="samba"></property.properties>-->
+        <constructor-arg value="Lion king possu "/>
+    </bean>
+<!--    <bean id="in_zoo" class="com.springcore.InZoo"> //initializing using constructor -->
+<!--        <property.properties name="animal">-->
+<!--            <bean class="com.springcore.Lion">-->
+<!--                <constructor-arg value="n king"/>-->
+<!--            </bean>-->
+<!--        </property.properties>-->
+<!--    </bean>-->
+<!--    //using reference-->
+    <bean id="in_zoo" class="com.springcore.InZoo">
+        <property name="animal" ref="animals"/>
+    </bean>
+</beans>
